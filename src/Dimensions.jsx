@@ -11,6 +11,8 @@ const Dimensions = () => {
       setHeight(innerHeight);
     };
     window.addEventListener('resize', onResize);
+
+    return () => window.removeEventListener('resize', onResize);
   }, [width, height]);
 
   return (
